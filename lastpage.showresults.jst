@@ -1,0 +1,49 @@
+<%
+	var category2 = global.femmeLabels;
+	var category1 = global.mascLabels;
+	var att2 = 'Gay people';
+	var att1 = 'Straight people';
+%>
+
+<div class="panel panel-info" style="margin-top:1em">
+		<div class="panel-heading">
+			<h1 class="panel-title" style="font-size:2em">
+				The End
+			</h1>
+		</div>
+</div>
+
+
+<div class="panel-body">
+	<h1 class='lead text-center'>
+<b>You have completed the study.</b>
+
+<br/><br/>
+
+    <b>During the Implicit Association Test (IAT) you just completed:<b>
+	<br/><br/>
+	<b><%= global.sexualityiat.feedback %>	</b>
+	<br/><br/>
+	</h1>
+
+	<p class='lead'><b>Disclaimer:</b><br/>
+	These IAT results are provided for educational purposes only. The results may fluctuate and should not be used to make important decisions. The results are influenced by variables related to the test (e.g., the words or images used to represent categories) and the person (e.g., being tired, what you were thinking about before the IAT).</p>
+
+	<p  class='lead'>On the next page you will recieve a debrief on the study that you can print. On this page there will also be a finsih button, please click this to complete the study. </p>
+	</p>
+	<br><br>
+
+	<p class='lead'><b> Please click the continue button below to proceed to the end of the study.  <b></p>
+	<br><br>
+
+	<div class="text-center proceed" style="margin: 30px auto 10px;">
+		<button pi-message-done type="button" class="btn btn-primary">
+			Continue
+		</button>
+	</div>
+</div>
+
+
+
+
+

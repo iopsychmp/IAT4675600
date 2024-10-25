@@ -1,0 +1,61 @@
+<%
+    var respInst = "you will use the 'E' and 'I' computer keys to";
+    if (global.$isTouch)  respInst = "you will";
+%>
+
+<div class="panel panel-info" style="margin-top:1em">
+		<div class="panel-heading">
+			<h1 class="panel-title" style="font-size:2em">
+				Implicit Association Test 
+			</h1>
+		</div>
+</div>
+
+<div class="panel-body">
+	<p class="lead">Next, <%=respInst%> categorize items into groups as fast as you can. 
+	These are the four groups and the items that belong to each:</p>
+
+	<table class="table table-bordered">
+		<tr class="active">
+			<th>Category</th>
+			<th>Items</th>
+		</tr>
+		<tr>
+			<th><%=global.mascLabels%></th>
+	<td>
+		  <img src="<%=global.baseURL%>mm1_nc.jpg" height=150>
+		  <img src="<%=global.baseURL%>mm2_nc.jpg" height=150>
+		  <img src="<%=global.baseURL%>mm3_nc.jpg" height=150>
+		  <img src="<%=global.baseURL%>mm4_nc.jpg" height=150>
+			  </td>
+		</tr>
+		<tr>
+			<th><%=global.femmeLabels%></th>
+			<td>    
+			  <img src="<%=global.baseURL%>mf1_nc.jpg" height=150>
+			  <img src="<%=global.baseURL%>mf2_nc.jpg" height=150>
+			  <img src="<%=global.baseURL%>mf3_nc.jpg" height=150>
+			  <img src="<%=global.baseURL%>mf4_nc.jpg" height=150>
+			  </td>
+		</tr>
+		<tr>
+			<th>Good Leader Qualities</th>
+			<td><%=global.glWords[0]%>, <%=global.glWords[1]%>, <%=global.glWords[2]%>, 
+			<%=global.glWords[3]%>, <%=global.glWords[4]%>, <%=global.glWords[5]%>, <%=global.glWords[6]%></td>
+		</tr>
+		<tr>
+			<th>Bad Leader Qualities</th>
+			<td><%=global.blWords[0]%>, <%=global.blWords[1]%>, <%=global.blWords[2]%>, 
+			<%=global.blWords[3]%>,  <%=global.blWords[4]%>,  <%=global.blWords[5]%>,  <%=global.blWords[6]%></td>
+		</tr>
+	</table>
+
+	<p class="lead">There are seven parts.  The instructions change for each part.  So please read each part carefully!<p>
+
+	<div class="text-center proceed" style="margin: 30px auto 10px;">
+		<button pi-message-done type="button" class="btn btn-primary">
+			Start
+		</button>
+	</div>
+</div>
+
