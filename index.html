@@ -1,55 +1,39 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css" />
-        <style type="text/css">
-            .container {padding-top: 15px;}
-        </style>
-    
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css" />
+		<style type="text/css">
+        .container {padding-top: 15px;}
+		</style>
+	
         <script>
-            function getUrlParameters() {
-                const urlParams = new URLSearchParams(window.location.search);
-                return {
-                    participantId: urlParams.get('participantId'),
-                    returnUrl: urlParams.get('return_url')
-                };
-            }
-
-            function handleCompletion() {
-                const { participantId, returnUrl } = getUrlParameters();
-                if (returnUrl) {
-                    const completionUrl = new URL(decodeURIComponent(returnUrl));
-                    completionUrl.searchParams.append('completion_status', 'complete');
-                    window.location.href = completionUrl.toString();
-                }
-            }
-        
             // load MinnoJS from the CDN (you probably don't need to change this)
-            var scriptTag = document.createElement('script');
-            scriptTag.src = 'https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/pi-minno.js';
-            scriptTag.onload = onLoad;
+            var scriptTag                = document.createElement('script');
+            scriptTag.src                = 'https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/pi-minno.js';
+            scriptTag.onload             = onLoad;
             scriptTag.onreadystatechange = onLoad;
             document.head.appendChild(scriptTag);
         
             // This function gets activated only after MinnoJS is loaded
             function onLoad() {
-                // Create a div with class 'container' and id 'minno-app'
-                var container = document.createElement('div');
-                container.className = 'container';
-                // Create the canvas object
-                var canvas = document.createElement('div');
-                // Append the canvas object to the container
-                container.appendChild(canvas);
-            
-                // Append the container to the body
-                document.body.appendChild(container);
+				// Create a div with class 'container' and id 'minno-app'
+				var container = document.createElement('div');
+				container.className = 'container';
+
+				// Create the canvas object
+				var canvas = document.createElement('div');
+
+				// Append the canvas object to the container
+				container.appendChild(canvas);
+			
+
+				// Append the container to the body
+				document.body.appendChild(container);
                 
                 // Run your study (just set the correct URL)
                 minnoJS(canvas, 'mgr.js');
                 
                 // We need to wait a few miliseconds for Qualtrics to register the value that we entered
-                minnoJS.onEnd = function () { 
-                    setTimeout(handleCompletion, 100);
-                }; // Added missing closing brace and semicolon
+                minnoJS.onEnd = function () { setTimeout(proceed, 100); }
             }
         </script>
     </head>
