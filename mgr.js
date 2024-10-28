@@ -32,7 +32,7 @@ if (sexualitySet == 'a') {
 API.addGlobal({
     sexualityiat:{},
     //YBYB: change when copying back to the correct folder
-    baseURL: './images/',
+    baseURL: 'images/',
     sexualitySet:sexualitySet,
     mascLabels:mascLabels,
     femmeLabels:femmeLabels,
