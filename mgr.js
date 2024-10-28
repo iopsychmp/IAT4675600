@@ -128,7 +128,7 @@ API.addTasksSet({
     redirect:
     [{ 
         //Replace with any URL you need to put at the end of your study, or just remove this task from the sequence below
-        type:'redirect', name:'redirecting', url: 'https://app.prolific.com/submissions/complete?cc=C1KKVSCTh' 
+        type:'redirect', name:'redirecting', url: 'https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_a49eT7D0lmJfJsy?respondentID=${respondentID}&redirect=2' 
     }],
     
     //This task waits until the data are sent to the server.
@@ -192,7 +192,7 @@ API.addSequence([
     {inherit: 'uploading'},
     //{inherit: 'lastpage'},
     //{inherit: 'feedback'},
-    //{inherit: 'redirect'}
+    {inherit: 'redirect'}
 ]);
 
 return API.script;
