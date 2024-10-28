@@ -181,11 +181,11 @@ API.addSequence([
     {inherit: 'intro'},
     {inherit: 'sexualityiat_instructions'},
     {inherit: 'sexualityiat'},
-    {inherit: 'explicits'},
+    //{inherit: 'explicits'},
     {inherit: 'uploading'},
-    {inherit: 'lastpage'},
-    {inherit: 'feedback'},
-    {inherit: 'redirect'}
+    //{inherit: 'lastpage'},
+    //{inherit: 'feedback'},
+    //{inherit: 'redirect'}
 ]);
 
 return API.script;
