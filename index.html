@@ -33,7 +33,11 @@
                 minnoJS(canvas, 'mgr.js');
                 
                 // We need to wait a few miliseconds for Qualtrics to register the value that we entered
-                minnoJS.onEnd = function () { setTimeout(proceed, 100); }
+                minnoJS.onEnd = function () { 
+                    console.log('Upload completed');
+                    // Do whatever you want to happen after upload
+                    setTimeout(proceed, 100); 
+};
             }
         </script>
     </head>
