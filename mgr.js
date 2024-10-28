@@ -32,7 +32,7 @@ if (sexualitySet == 'a') {
 API.addGlobal({
     sexualityiat:{},
     //YBYB: change when copying back to the correct folder
-    baseURL: 'images/',
+    baseURL: 'https://raw.githubusercontent.com/iopsychmp/IAT4675600/6d68bdcb17f4455e44513a7babcea8e8700e35a4/images/',
     sexualitySet:sexualitySet,
     mascLabels:mascLabels,
     femmeLabels:femmeLabels,
