@@ -132,7 +132,14 @@ API.addTasksSet({
     }],
     
     //This task waits until the data are sent to the server.
-    uploading: uploading_task({header: 'just a moment', body:'Please wait, sending data... '})
+    uploading: uploading_task({
+        header: 'just a moment', 
+        body: 'Please wait, sending data... ',
+        onComplete: function() {
+            // This will trigger after upload is complete
+            window.minnoJS.onEnd();
+        }
+    })
 });
 
 API.addSequence([

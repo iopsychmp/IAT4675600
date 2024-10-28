@@ -2,8 +2,6 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
     let API = new APIConstructor();
     let global = API.getGlobal();
 
-    API.addSettings('onEnd', window.minnoJS.onEnd);
-
     // Add Logger configuration
     API.addSettings('logger', {
         // gather logs in array
