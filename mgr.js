@@ -17,7 +17,9 @@ API.addSettings('skip',true);
 
 // Extract respondentID from the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
-const respondentID = urlParams.get('respondentID');
+const respondentID = urlParams.get('${e://Field/respondentID}');
+// Log respondentID to check if it's captured correctly
+console.log("Captured respondentID:", respondentID);
 
 //Randomly select which of two sets of category labels to use.
 let sexualitySet = API.shuffle(['a','b'])[0];
