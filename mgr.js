@@ -15,6 +15,10 @@ init_data_pipe(API, 'y1vWLQb3pdKY',  {file_type:'csv'});
 API.setName('mgr');
 API.addSettings('skip',true);
 
+// Extract respondentID from the URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const respondentID = urlParams.get('respondentID');
+
 //Randomly select which of two sets of category labels to use.
 let sexualitySet = API.shuffle(['a','b'])[0];
 let mascLabels = [];
@@ -128,7 +132,7 @@ API.addTasksSet({
     redirect:
     [{ 
         //Replace with any URL you need to put at the end of your study, or just remove this task from the sequence below
-        type:'redirect', name:'redirecting', url: 'https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_a49eT7D0lmJfJsy?redirect=2' 
+        type:'redirect', name:'redirecting', url: 'https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_a49eT7D0lmJfJsy?redirect=2&respondentID=${respondentID}' 
     }],
     
     //This task waits until the data are sent to the server.
