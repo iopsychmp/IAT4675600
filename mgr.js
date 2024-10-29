@@ -190,7 +190,7 @@ API.addSequence([
     {inherit: 'sexualityiat'},
     //{inherit: 'explicits'},
     {inherit: 'uploading'},
-    //{inherit: 'lastpage'},
+    {inherit: 'lastpage'},
     //{inherit: 'feedback'},
     {inherit: 'redirect'}
 ]);
