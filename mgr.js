@@ -4,8 +4,8 @@ define(['managerAPI',
 
 //You can use the commented-out code to get parameters from the URL.
 // Set to female trial if url ends in "/?group=1" or male trial if "/?group=0"
-//const queryString = window.location.search;
-//const urlParams = new URLSearchParams(queryString);
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 //const group = urlParams.get('group');  
 
 var API    = new Manager();
