@@ -6,7 +6,7 @@ define(['managerAPI',
 // Set to female trial if url ends in "/?group=1" or male trial if "/?group=0"
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-//const group = urlParams.get('group');  
+const respondentID = urlParams.get('respondentID');  
 
 var API    = new Manager();
 //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
@@ -19,7 +19,7 @@ API.addSettings('skip',true);
 let sexualitySet = API.shuffle(['a','b'])[0];
 let mascLabels = [];
 let femmeLabels = [];
-let group = 3;
+//let group = 3;
 
 if (sexualitySet == 'a') {
     mascLabels.push('Masculine Presenting');
