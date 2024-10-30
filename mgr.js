@@ -7,6 +7,7 @@ define(['managerAPI',
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const respondentID = urlParams.get('respondentID');  
+console.log("Respondent ID:", respondentID); // Log the specific parameter
 
 var API    = new Manager();
 //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
@@ -128,7 +129,7 @@ API.addTasksSet({
     redirect:
     [{ 
         //Replace with any URL you need to put at the end of your study, or just remove this task from the sequence below
-        type:'redirect', name:'redirecting', url: 'https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_a49eT7D0lmJfJsy?redirect=2&respondentID=${e://Field/respondentID}' 
+        type:'redirect', name:'redirecting', url: 'https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_a49eT7D0lmJfJsy?&respondentID={respondentID}&redirect=2' 
     }],
     
     //This task waits until the data are sent to the server.
