@@ -4,10 +4,15 @@ define(['managerAPI',
 
 //You can use the commented-out code to get parameters from the URL.
 // Set to female trial if url ends in "/?group=1" or male trial if "/?group=0"
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const respondentID = urlParams.get('respondentID');  
-console.log("Respondent ID:", respondentID); // Log the specific parameter
+window.addEventListener('load', () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const respondentID = urlParams.get('respondentID');
+
+    // Log to check if respondentID is correctly retrieved
+    console.log("Respondent ID:", respondentID);
+});
+
 
 var API    = new Manager();
 //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
