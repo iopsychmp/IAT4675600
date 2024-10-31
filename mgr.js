@@ -6,11 +6,12 @@ define(['managerAPI',
 // Set to female trial if url ends in "/?group=1" or male trial if "/?group=0"
 window.addEventListener('load', () => {
     const queryString = window.location.search;
+    console.log("Full Query String:", queryString); // Log the full query string to check if it's accessible
+
     const urlParams = new URLSearchParams(queryString);
     const respondentID = urlParams.get('respondentID');
 
-    // Log to check if respondentID is correctly retrieved
-    console.log("Respondent ID:", respondentID);
+    console.log("Respondent ID:", respondentID); // Log respondentID to see if it’s captured
 });
 
 
