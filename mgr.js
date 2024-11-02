@@ -129,7 +129,7 @@ API.addTasksSet({
     redirect:
     [{ 
         //Replace with any URL you need to put at the end of your study, or just remove this task from the sequence below
-        type:'redirect', name:'redirecting', url: `https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_4Z9RAw9lSwxFazc?respondentID=${respondentID}&&redirect=1` 
+        type:'redirect', name:'redirecting', url: `https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_cZvtFniBBQaG0ke?respondentID=${respondentID}&&redirect=1` 
     }],
     
     //This task waits until the data are sent to the server.
