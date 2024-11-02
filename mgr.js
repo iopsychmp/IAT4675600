@@ -6,8 +6,10 @@ define(['managerAPI',
 // Set to female trial if url ends in "/?group=1" or male trial if "/?group=0"
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const respondentID = urlParams.get('respondentID');  
+const respondentID = urlParams.get('respondentID');
+const PROLIFIC_PID = urlParams.get('PROLIFIC_PID');  
 console.log("Respondent ID:", respondentID); // Log the specific parameter
+console.log("PROLIFIC_PID", respondentID); // Log the specific parameter
 
 var API    = new Manager();
 //const subid = Date.now().toString(16)+Math.floor(Math.random()*10000).toString(16);
@@ -20,7 +22,6 @@ API.addSettings('skip',true);
 let sexualitySet = API.shuffle(['a','b'])[0];
 let mascLabels = [];
 let femmeLabels = [];
-//let group = 3;
 
 if (sexualitySet == 'a') {
     mascLabels.push('Masculine Presenting');
@@ -129,7 +130,7 @@ API.addTasksSet({
     redirect:
     [{ 
         //Replace with any URL you need to put at the end of your study, or just remove this task from the sequence below
-        type:'redirect', name:'redirecting', url: `https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_1AF2ImTx4YTdHrU?respondentID=${respondentID}&redirect=1` 
+        type:'redirect', name:'redirecting', url: `https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_1AF2ImTx4YTdHrU?respondentID=${respondentID}&PROLIFIC_PID=${PROLIFIC_PID}redirect=1` 
     }],
     
     //This task waits until the data are sent to the server.
@@ -189,7 +190,7 @@ API.addSequence([
     {inherit: 'intro'},
     {inherit: 'sexualityiat_instructions'},
     {inherit: 'sexualityiat'},
-    //{inherit: 'explicits'},
+    {inherit: 'explicits'},
     {inherit: 'uploading'},
     {inherit: 'lastpage'},
     //{inherit: 'feedback'},
