@@ -126,18 +126,10 @@ API.addTasksSet({
     }], 
     
     //Use if you want to redirect the participants elsewhere at the end of the study
-    redirect: [{
-        type: 'redirect',
-        name: 'redirecting',
-        url: function() {
-            // Get the original ResponseID from localStorage
-            const originalRespondentID = window.localStorage.getItem('originalResponseID');
-            // Use the stored ID or fall back to the URL parameter if storage fails
-            const respondentID = originalRespondentID || urlParams.get('respondentID');
-            
-            // Construct the Qualtrics return URL with the original ResponseID
-            return `https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_02MU4sK7SrHzvnM?Q_R=${respondentID}&respondentID=${respondentID}redirect=1`;
-        }
+    redirect:
+    [{ 
+        //Replace with any URL you need to put at the end of your study, or just remove this task from the sequence below
+        type:'redirect', name:'redirecting', url: `https://uwaterloo.ca1.qualtrics.com/jfe/form/SV_4Z9RAw9lSwxFazc?respondentID=${respondentID}&&redirect=1` 
     }],
     
     //This task waits until the data are sent to the server.
