@@ -9,7 +9,7 @@ define(['questAPI'], function(Quest){
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Questionnaire',
         autoSubmit: true,
-        decline: true,
+        decline: 'double',
         submitText: 'Next',
         declineText: isTouch ? 'Skip' : 'Skip', 
         autoFocus:true, 
@@ -20,7 +20,7 @@ define(['questAPI'], function(Quest){
 	* Question prototypes
 	*/
     API.addQuestionsSet('basicQ',{
-        decline: 'true',
+        decline: 'double',
         required : true, 		
         errorMsg: {
             required: isTouch 
