@@ -11,9 +11,9 @@ define(['questAPI'], function(Quest){
         autoSubmit: true,
         decline: 'double',
         submitText: 'Next',
-        declineText: isTouch ? 'Skip' : 'Skip', 
+        declineText: isTouch ? 'Double click to skip' : 'Double click to skip', 
         autoFocus:true, 
-        progressBar:  'Page <%= pagesMeta.number %> out of 35'
+        progressBar:  'Page <%= pagesMeta.number %> out of 33',
     });
 	
     /**
@@ -24,13 +24,13 @@ define(['questAPI'], function(Quest){
         required : true, 		
         errorMsg: {
             required: isTouch 
-                ? 'Please select an answer, or click \'Skip\'' 
-                : 'Please select an answer, or click \'Skip\''
+                ? 'Please select an answer, or click \'Double click to skip\'' 
+                : 'Please select an answer, or click \'Double click to skip\''
         },
         autoSubmit:'true',
         numericValues:'true',
-        help: '<%= pagesMeta.number < 35 %>',
-        helpText: 'Tip: For quick response, click to select your answer, and then click again to submit.'
+        help: '<%= pagesMeta.number < 33 %>',
+        helpText: 'Tip: For quick response, click to select your answer, and then click again to submit.',
     });
 
     API.addQuestionsSet('basicSQ',{
@@ -42,6 +42,7 @@ define(['questAPI'], function(Quest){
                 : 'Please type an answer, or click \'Decline to Answer\' if you have no feedback or to skip the question'
         },
         autoSubmit:'true',
+        submitText: 'Submit',
         numericValues:'true',
         type : 'textarea'
     });
@@ -71,7 +72,7 @@ define(['questAPI'], function(Quest){
             {stem: 'How understanding are they?', name:'understandingSM'},
             {stem: 'How friendly are they?', name:'friendlySM'},
             {stem: 'How good natured are they?', name:'goodSM'},
-            {stem: 'How sincere are they?', name:'sincereeSM'}
+            {stem: 'How sincere are they?', name:'sincereeSM'},
         ]
     });
 	
@@ -853,7 +854,7 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('RTGR6',{
         inherit : 'RLikertagree',
         name: 'RTGR6',
-        stem: 'A father/s major responsibility is to provide finacially for his children.'
+        stem: "A father's major responsibility is to provide finacially for his children."
     });
     API.addQuestionsSet('TGR7',{
         inherit : 'Likertagree',
@@ -985,78 +986,78 @@ define(['questAPI'], function(Quest){
                             },
                         ]						
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'thermSW'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RthermSW'}	
-                            },
-                        ]						
-                    },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'thermGW'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RthermGW'}	
-                            },
-                        ]						
-                    },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'thermSM'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RthermSM'}	
-                            },
-                        ]						
-                    },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'thermGM'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RthermGM'}	
-                            },
-                        ]						
-                    },
+                    //{mixer: 'choose',
+                        //data: [
+                            //{
+                           //     inherit:'basicPage', 
+                           //     questions: {inherit:'thermSW'}	
+                           // },
+                           // {
+                           //     inherit:'basicPage', 
+                           //     questions: {inherit:'RthermSW'}	
+                           // },
+                      //  ]						
+                   // },
+                   // {mixer: 'choose',
+                        //data: [
+                         //   {
+                          //      inherit:'basicPage', 
+                          //      questions: {inherit:'thermGW'}	
+                          //  },
+                          //  {
+                          //      inherit:'basicPage', 
+                          //      questions: {inherit:'RthermGW'}	
+                          //  },
+                       // ]						
+                   // },
+                    //{mixer: 'choose',
+                        //data: [
+                           // {
+                           //     inherit:'basicPage', 
+                           //     questions: {inherit:'thermSM'}	
+                           // },
+                           // {
+                            //    inherit:'basicPage', 
+                            //    questions: {inherit:'RthermSM'}	
+                            //},
+                       // ]						
+                    //},
+                    //{mixer: 'choose',
+                        //data: [
+                         //   {
+                          //      inherit:'basicPage', 
+                          //      questions: {inherit:'thermGM'}	
+                          //  },
+                          //  {
+                          //      inherit:'basicPage', 
+                          //      questions: {inherit:'RthermGM'}	
+                          //  },
+                        //]						
+                   // },
                     {
                         inherit:'basicPage', 
                         questions: {inherit:'check'}
                     },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Expomet'}							
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Expofam'}							
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Expofriend'}							
-                    },
+                   // {
+                    //    inherit:'basicPage', 
+                    //    questions: {inherit:'Expomet'}							
+                    //},
+                    //{
+                    //    inherit:'basicPage', 
+                    //    questions: {inherit:'Expofam'}							
+                    //},
+                    //{
+                      //  inherit:'basicPage', 
+                      //  questions: {inherit:'Expofriend'}							
+                   // },
                     {
                         inherit:'basicPage', 
                         questions: {inherit:'OpMarr'}							
                     },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Opbath'}							
-                    },
+                    //{
+                      //  inherit:'basicPage', 
+                        //questions: {inherit:'Opbath'}							
+                   // },
                     {
                         inherit:'basicPage', 
                         questions: {inherit:'Opchild'}							
@@ -1065,50 +1066,50 @@ define(['questAPI'], function(Quest){
                         inherit:'basicPage', 
                         questions: {inherit:'Opbus'}							
                     },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Oprel'}							
-                    },
-                    {
-                        inherit:'basicPage', 
+                    //{
+                      //  inherit:'basicPage', 
+                        //questions: {inherit:'Oprel'}							
+                   // },
+                   {
+                       inherit:'basicPage', 
                         questions: {inherit:'Belfbou'}							
                     },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belfknow'}							
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belflam'}	
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belnails'}	
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belfem'}	
-                     },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belwalk'}							
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Beldress'}	
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belmake'}	
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belmasc'}	
-                    },
-                    {
-                        inherit:'basicPage', 
-                        questions: {inherit:'Belook'}	
-                    },
+                   // {
+                     //   inherit:'basicPage', 
+                       // questions: {inherit:'Belfknow'}							
+                   // },
+                    //{
+                      //  inherit:'basicPage', 
+                        //questions: {inherit:'Belflam'}	
+                   // },
+                    //{
+                      //  inherit:'basicPage', 
+                        //questions: {inherit:'Belnails'}	
+                    //},
+                   // {
+                     //   inherit:'basicPage', 
+                      //  questions: {inherit:'Belfem'}	
+                   //  },
+                   // {
+                    //    inherit:'basicPage', 
+                   //     questions: {inherit:'Belwalk'}							
+                   // },
+                    //{
+                   //     inherit:'basicPage', 
+                   //     questions: {inherit:'Beldress'}	
+                   // },
+                   // {
+                   //     inherit:'basicPage', 
+                   //     questions: {inherit:'Belmake'}	
+                   // },
+                    //{
+                    //    inherit:'basicPage', 
+                   //     questions: {inherit:'Belmasc'}	
+                   // },
+                   // {
+                    //    inherit:'basicPage', 
+                   //     questions: {inherit:'Belook'}	
+                   // },
                     {mixer: 'choose',
                         data: [
                             {
