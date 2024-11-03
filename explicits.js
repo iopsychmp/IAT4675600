@@ -848,7 +848,7 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('TGR6',{
         inherit : 'Likertagree',
         name: 'TGR6',
-        stem: 'A father/s major responsibility is to provide finacially for his children.'
+        stem: "A father's major responsibility is to provide finacially for his children."
     });
     API.addQuestionsSet('RTGR6',{
         inherit : 'RLikertagree',
@@ -1035,6 +1035,10 @@ define(['questAPI'], function(Quest){
                     },
                     {
                         inherit:'basicPage', 
+                        questions: {inherit:'check'}
+                    },
+                    {
+                        inherit:'basicPage', 
                         questions: {inherit:'Expomet'}							
                     },
                     {
@@ -1149,7 +1153,58 @@ define(['questAPI'], function(Quest){
                         inherit:'basicPage', 
                         questions: {inherit:'leadmf4'}
                     },
-
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR1'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR2'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR3'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR4'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR5'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR6'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR7'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR8'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR9'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR10'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR11'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR12'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'TGR13'}
+                    },
                 ]
             }
             
