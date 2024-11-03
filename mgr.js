@@ -189,7 +189,7 @@ API.addSequence([
     //{inherit: 'prolificid'},
     {inherit: 'intro'},
     {inherit: 'sexualityiat_instructions'},
-    {inherit: 'sexualityiat'},
+    //{inherit: 'sexualityiat'},
     {inherit: 'explicits'},
     {inherit: 'uploading'},
     {inherit: 'lastpage'},
