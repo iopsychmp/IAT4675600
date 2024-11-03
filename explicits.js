@@ -1173,6 +1173,79 @@ define(['questAPI'], function(Quest){
                             },
                         ]						
                     },
+                    {mixer: 'choose',
+                        data: [
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'leadmm1'}
+                            },
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'Rleadmm1'}
+                            }
+                        ]
+                    },
+                    {mixer: 'choose',
+                        data: [
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'leadmm2'}
+                            },
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'Rleadmm2'}
+                            }
+                        ]
+                    },
+                    {mixer: 'choose',
+                        data: [
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'leadmm3'}
+                            },
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'Rleadmm3'}
+                            }
+                        ]
+                    },
+                    {mixer: 'choose',
+                        data: [
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'leadmm4'}
+                            },
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'Rleadmm4'}
+                            }
+                        ]
+                    },
+                    {mixer: 'choose',
+                        data: [
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'leadmf1'}
+                            },
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'Rleadmf1'}
+                            }
+                        ]
+                    },
+                    {mixer: 'choose',
+                        data: [
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'leadmf2'}
+                            },
+                            {
+                                inherit:'basicPage', 
+                                questions: {inherit:'Rleadmf2'}
+                            }
+                        ]
+                    },
+
                 ]
             }
             
