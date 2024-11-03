@@ -13,7 +13,7 @@ define(['questAPI'], function(Quest){
         submitText: 'Next',
         declineText: isTouch ? 'Skip' : 'Skip', 
         autoFocus:true, 
-        progressBar:  'Page <%= pagesMeta.number %> out of 24'
+        progressBar:  'Page <%= pagesMeta.number %> out of 35'
     });
 	
     /**
@@ -29,7 +29,7 @@ define(['questAPI'], function(Quest){
         },
         autoSubmit:'true',
         numericValues:'true',
-        help: '<%= pagesMeta.number < 24 %>',
+        help: '<%= pagesMeta.number < 35 %>',
         helpText: 'Tip: For quick response, click to select your answer, and then click again to submit.'
     });
 
@@ -1073,93 +1073,37 @@ define(['questAPI'], function(Quest){
                         inherit:'basicPage', 
                         questions: {inherit:'Belfknow'}							
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Belflam'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBelflam'}	
-                            },
-                        ]						
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Belflam'}	
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Belnails'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBelnails'}	
-                            },
-                        ]						
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Belnails'}	
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Belfem'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBelfem'}	
-                            },
-                        ]						
-                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Belfem'}	
+                     },
                     {
                         inherit:'basicPage', 
                         questions: {inherit:'Belwalk'}							
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Beldress'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBeldress'}	
-                            },
-                        ]						
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Beldress'}	
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Belmake'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBelmake'}	
-                            },
-                        ]						
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Belmake'}	
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Belmasc'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBelmasc'}	
-                            },
-                        ]						
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Belmasc'}	
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Belook'}	
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'RBelook'}	
-                            },
-                        ]						
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'Belook'}	
                     },
                     {mixer: 'choose',
                         data: [
@@ -1173,77 +1117,37 @@ define(['questAPI'], function(Quest){
                             },
                         ]						
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'leadmm1'}
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Rleadmm1'}
-                            }
-                        ]
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmm1'}
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'leadmm2'}
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Rleadmm2'}
-                            }
-                        ]
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmm2'}
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'leadmm3'}
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Rleadmm3'}
-                            }
-                        ]
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmm3'}
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'leadmm4'}
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Rleadmm4'}
-                            }
-                        ]
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmm4'}
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'leadmf1'}
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Rleadmf1'}
-                            }
-                        ]
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmf1'}
                     },
-                    {mixer: 'choose',
-                        data: [
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'leadmf2'}
-                            },
-                            {
-                                inherit:'basicPage', 
-                                questions: {inherit:'Rleadmf2'}
-                            }
-                        ]
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmf2'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmf3'}
+                    },
+                    {
+                        inherit:'basicPage', 
+                        questions: {inherit:'leadmf4'}
                     },
 
                 ]
