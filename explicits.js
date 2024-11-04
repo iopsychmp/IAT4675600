@@ -659,7 +659,8 @@ define(['questAPI'], function(Quest){
             {text:'Homosexual women',value:4},
             {text:'Non-binary individuals',value:3},
             {text:'Men (sexual orinetation was not given)',value:2},
-            {text:'Women (sexual orinetation was not given)',value:1}
+            {text:'Women (sexual orinetation was not given)',value:1},
+            {text:'Unsure',value:1}
         ]
     });
 
