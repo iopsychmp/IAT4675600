@@ -428,13 +428,13 @@ define(['questAPI'], function(Quest){
         name: 'attributes7',
         stem: 'Which statement best describes you?',
         answers: [
-            {text:'I strongly prefer straight people to gay people',value:7},
-            {text:'I moderately prefer straight people to gay people',value:6},
-            {text:'I slightly prefer straight people to gay people',value:5},
-            {text:'I like straight people and gay people equally',value:4},
-            {text:'I slightly prefer gay people to straight people',value:3},
-            {text:'I moderately prefer gay people to straight people',value:2},
-            {text:'I strongly prefer gay people to straight people',value:1}
+            {text:'I strongly prefer <b>straight</b> people to <b>gay</b> people',value:7},
+            {text:'I moderately prefer <b>straight</b> people to <b>gay</b> people',value:6},
+            {text:'I slightly prefer <b>straight</b> people to <b>gay</b> people',value:5},
+            {text:'I like straight people and gay people <b>equally</b>',value:4},
+            {text:'I slightly prefer <b>gay</b> people to <b>straight</b> people',value:3},
+            {text:'I moderately prefer <b>gay</b> people to <b>straight</b> people',value:2},
+            {text:'I strongly prefer <b>gay</b> people to <b>straight</b> people',value:1}
         ]
     });
 	
@@ -443,13 +443,13 @@ define(['questAPI'], function(Quest){
         name: 'Rattributes7',
         stem: 'Which statement best describes you?',
         answers: [
-            {text:'I strongly prefer gay people to straight people',value:1},
-            {text:'I moderately prefer gay people to straight people',value:2},
-            {text:'I slightly prefer gay people to straight people',value:3},
-            {text:'I like gay people and straight people equally',value:4},
-            {text:'I slightly prefer straight people to gay people',value:5},
-            {text:'I moderately prefer straight people to gay people',value:6},
-            {text:'I strongly prefer straight people to gay people',value:7}
+            {text:'I strongly prefer <b>gay</b> people to <b>straight</b> people',value:1},
+            {text:'I moderately prefer <b>gay</b> people to <b>straight</b> people',value:2},
+            {text:'I slightly prefer <b>gay</b> people to <b>straight</b> people',value:3},
+            {text:'I like gay people and straight people <b>equally</b>',value:4},
+            {text:'I slightly prefer <b>straight</b> people to <b>gay</b> people',value:5},
+            {text:'I moderately prefer <b>straight</b> people to <b>gay</b> people',value:6},
+            {text:'I strongly prefer <b>straight</b> people to <b>gay<b> people',value:7}
         ]
     });
     API.addQuestionsSet('thermSW',{
@@ -632,7 +632,7 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('bestleader8',{
         inherit : 'basicSelect',
         name: 'bestleader8',
-        stem: 'Based on appearance, who do you think would make the best leader? ',
+        stem: 'Based on appearance, who do you think would make the <b>best</b> leader? ',
         answers: [
             {mixer: 'random',
                 data : [
@@ -650,7 +650,7 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('worstleader8',{
         inherit : 'basicSelect',
         name: 'worstleader8',
-        stem: 'Based on appearance, who do you think would make the worst leader? ',
+        stem: 'Based on appearance, who do you think would make the <b>worst</b> leader? ',
         answers: [
             {mixer: 'random',
                 data : [
@@ -771,49 +771,49 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('CWSM',{
         inherit : 'matrixSM',
         name: 'CWSM',
-        stem: 'Please answer the following about how heterosexual men are in general:'
+        stem: 'Please answer the following about how <b>heterosexual men</b> are in general:'
     });
 
     API.addQuestionsSet('RCWSM',{
         inherit : 'RmatrixSM',
         name: 'RCWSM',
-        stem: 'Please answer the following about how heterosexual men are in general:'
+        stem: 'Please answer the following about how <b>heterosexual men</b> are in general:'
     });
 
     API.addQuestionsSet('CWGM',{
         inherit : 'matrixGM',
         name: 'CWGM',
-        stem: 'Please answer the following about how homosexual men are in general:'
+        stem: 'Please answer the following about how <b>homosexual men</b> are in general:'
     });
 
     API.addQuestionsSet('RCWGM',{
         inherit : 'RmatrixGM',
         name: 'RCWGM',
-        stem: 'Please answer the following about how homosexual men are in general:'
+        stem: 'Please answer the following about how <b>homosexual men</b> are in general:'
     });
 
     API.addQuestionsSet('CWGW',{
         inherit : 'matrixGW',
         name: 'CWGW',
-        stem: 'Please answer the following about how homosexual women are in general:'
+        stem: 'Please answer the following about how <b>homosexual women</b> are in general:'
     });
 
     API.addQuestionsSet('RCWGW',{
         inherit : 'RmatrixGW',
         name: 'RCWGW',
-        stem: 'Please answer the following about how homosexual women are in general:'
+        stem: 'Please answer the following about how <b>homosexual women<b> are in general:'
     });
 
     API.addQuestionsSet('CWSW',{
         inherit : 'matrixSW',
         name: 'CWSW',
-        stem: 'Please answer the following about how heterosexual women are in general:'
+        stem: 'Please answer the following about how <b>heterosexual women</b> are in general:'
     });
 
     API.addQuestionsSet('RCWSW',{
         inherit : 'RmatrixSW',
         name: 'RCWSW',
-        stem: 'Please answer the following about how heterosexual women are in general:'
+        stem: 'Please answer the following about how <b>heterosexual women</b> are in general:'
     });
     API.addQuestionsSet('TGR1',{
         inherit : 'Likertagree',
