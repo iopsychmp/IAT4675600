@@ -632,7 +632,25 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('bestleader8',{
         inherit : 'basicSelect',
         name: 'bestleader8',
-        stem: 'Based on appearance who do you think would make the best leader? ',
+        stem: 'Based on appearance, who do you think would make the best leader? ',
+        answers: [
+            {mixer: 'random',
+                data : [
+            {text:'<img src="<%=global.baseURL%>mm1_nc.jpg" height=80>', value: 'mm1_nc'},
+            {text:'<img src="<%=global.baseURL%>mm2_nc.jpg" height=80>',value: 'mm2_nc'},
+            {text:'<img src="<%=global.baseURL%>mm3_nc.jpg" height=80>', value: 'mm3_nc'},
+            {text:'<img src="<%=global.baseURL%>mm4_nc.jpg" height=80>', value: 'mm4_nc'},
+            {text:'<img src="<%=global.baseURL%>mf1_nc.jpg" height=80>', value:'mf1_nc'},
+            {text:'<img src="<%=global.baseURL%>mf2_nc.jpg" height=80>', value:'mf2_nc'},
+            {text:'<img src="<%=global.baseURL%>mf3_nc.jpg" height=80>', value: 'mf3_nc'},
+            {text:'<img src="<%=global.baseURL%>mf4_nc.jpg" height=80>', value: 'mf4_nc'}]
+            }
+        ]
+    });
+    API.addQuestionsSet('worstleader8',{
+        inherit : 'basicSelect',
+        name: 'worstleader8',
+        stem: 'Based on appearance, who do you think would make the worst leader? ',
         answers: [
             {mixer: 'random',
                 data : [
@@ -933,6 +951,10 @@ define(['questAPI'], function(Quest){
             inherit:'basicPage', 
             questions: {inherit:'bestleader8'}
         },
+        {
+            inherit:'basicPage', 
+            questions: {inherit:'worstleader8'}
+        },
       {mixer : 'random', 
         data : [
             {
@@ -1211,10 +1233,10 @@ define(['questAPI'], function(Quest){
             }
             
         ]},
-        {
-            inherit:'basicPage', 
-            questions: {inherit:'shortA'}
-        }
+        //{
+          //  inherit:'basicPage', 
+            //questions: {inherit:'shortA'}
+       // }
 
     ]);
 
